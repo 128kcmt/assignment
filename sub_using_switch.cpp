@@ -22,7 +22,7 @@ using namespace std;
             cout <<"Your subscription expires within a day!"<< endl << "Renew now and save 20%!";
         }
         break;
-        case 3: case 4: case 5:{
+     case 2: case 3: case 4: case 5:{
             cout << "Your subscription expires in "<< daysUntilExpiration << " days" << endl << " Renew now and save 10%!";
         }
         break;
