@@ -7,7 +7,6 @@ using namespace std;
 //function to capitialize second letter in FileData
 void CapitalizeSecondLetter(string& str) {
     bool newWord = true; // Flag to track word boundaries
-
     for (size_t i = 0; i < str.length(); ++i) {
         if (newWord && islower(str[i])) {
             str[i] = toupper(str[i]); // Capitalize the second letter
@@ -45,12 +44,9 @@ if (text.is_open()){
     }
 }
 cout << "nubmer of vowesls in FileData is : " << vowelcount << endl;
-CapitalizeSecondLetter(FileData);
-cout <<" the capitalized second letter is as follows: " << FileData << endl; 
-
-
+cout <<" the capitalized second letter is as follows: " << CapitalizeSecondLetter(FileData); << endl; 
 Reverse(FileData);
-cout << "the reversed text: " << FileData << endl;
+cout << "the reversed text: " << Reverse(FileData); << endl;
 
 return 0;
 }
