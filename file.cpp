@@ -4,6 +4,17 @@
 #include <algorithm>
 using namespace std;
 
+//function to count number of vowels
+int countvowel(const string& vowel){
+    int vowelcount = 0;
+    string vowels = "AEIOUaeiou";
+    for(char ch : vowel){
+        if(vowels.find(ch) != string::npos){
+            vowelcount++;
+        }
+    }
+    return vowelcount;
+}
 //function to capitialize second letter in FileData
 void CapitalizeSecondLetter(string& str) {
     bool newWord = true; // Flag to track word boundaries
@@ -24,6 +35,7 @@ void Reverse(string& str){
     reverse (str.begin(), str.end());
 }
 int main (){
+    string second;
     int vowelcount=0;
     string vowels = "AEIOUaeiuo";
 
@@ -37,15 +49,14 @@ if (text.is_open()){
     }
     text.close();
     cout << FileData << endl;
-    for(char ch : FileData){
-        if (vowels.find(ch) != string::npos){
-            vowelcount++;
-        }
-    }
-}
-cout << "nubmer of vowesls in FileData is : " << vowelcount << endl;
-cout <<" the capitalized second letter is as follows: " << CapitalizeSecondLetter(FileData); << endl; 
-cout << "the reversed text: " << Reverse(FileData); << endl;
+int vowelcount = countvowel(FileData);
+cout << vowelcount << endl;
 
+CapitalizeSecondLetter(FileData);
+cout << FileData << endl;
+
+Reverse(FileData);
+cout << FileData << endl;
+}
 return 0;
 }
