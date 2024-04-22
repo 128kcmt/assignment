@@ -45,7 +45,6 @@ if (text.is_open()){
 }
 cout << "nubmer of vowesls in FileData is : " << vowelcount << endl;
 cout <<" the capitalized second letter is as follows: " << CapitalizeSecondLetter(FileData); << endl; 
-Reverse(FileData);
 cout << "the reversed text: " << Reverse(FileData); << endl;
 
 return 0;
